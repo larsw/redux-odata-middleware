@@ -1,0 +1,39 @@
+{
+  "name": "redux-odata-middleware",
+  "version": "0.0.1",
+  "description": "A redux middleware for working with OData services.",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "babel src --out-dir lib",
+    "clean": "rimraf lib",
+    "prepublish": "npm run lint && npm test && npm run clean && npm run build",
+    "lint": "eslint src",
+    "test": "babel-node test/index.js | tap-spec"
+  },
+  "author": {
+    "name": "Lars Wilhelmsen",
+    "email": "lars@sral.org"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "babel-runtime": "^6.9.2",
+    "jaydata-odatajs": "^4.0.1"
+  },
+  "devDependencies": {
+    "babel": "^6.5.2",
+    "babel-core": "^6.10.4",
+    "babel-eslint": "^6.1.0",
+    "babel-istanbul": "^0.11.0",
+    "coveralls": "^2.11.9",
+    "eslint": "^2.13.1",
+    "eslint-plugin-babel": "^3.3.0",
+    "rimraf": "^2.5.2",
+    "tap-spec": "^4.1.1",
+    "tape": "^4.6.0"
+  },
+  "files": [
+    "README.md",
+    "LICENSE.md",
+    "lib/"
+  ]
+}
